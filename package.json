@@ -1,0 +1,9 @@
+{
+  "name": "sandbox.insomnia-issue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "yaml": "^2.1.1"
+  }
+}

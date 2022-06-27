@@ -1,0 +1,53 @@
+_id: req_0bde420f2bdf47aeb1a38cde1a568d3b
+type: Request
+parentId: wrk_e1aeeecaf2d24cf09547357ab7428724
+modified: 1656229589923
+created: 1635140981550
+url: "{{ _.base_url }}"
+name: query.userAccount.pro.skillList
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: "{\"query\":\"query userAccount_pro_skillList($userAccountId: ID!)
+    {\\n  userAccount (\\n    where: {\\n    \\tid:
+    $userAccountId\\n  \\t}\\n  ) {\\n    id\\n    pro
+    {\\n      id\\n      skillList(\\n        take: 2, \\n        where: {
+    \\t\\n\\t\\t\\t\\t\\tskill: {\\n\\t          skillCategoryList: { hasSome:
+    [TREE] } \\n  \\t        label: {\\n    \\t        contains:
+    \\\"react\\\"\\n      \\t      mode:
+    insensitive\\n        \\t  }\\n\\t\\t\\t\\t\\t}\\n        } \\n      )
+    {\\n        pageInfo
+    {\\n          startCursor\\n          hasNextPage\\n          hasNextPage\\\
+    n          endCursor\\n        }\\n        nodes
+    {\\n          id\\n          skill {
+    \\n\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\tkey\\n\\t\\t\\t\\t\\t\\tlabel\\t\
+    \\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t}\\n        }\\n      }\\n    }\\n  }\\n}\\
+    ",\"variables\":{\"userAccountId\":\"{% response 'body',
+    'req_bfbe07ff48a542daa3a39224c12419ed',
+    'b64::JC5kYXRhLmNyZWF0ZUF1dGhvcml6YXRpb24udXNlci51c2VyQWNjb3VudC5pZA==::46b\
+    ', 'always', 60 %}\"},\"operationName\":\"userAccount_pro_skillList\"}"
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c7ad1624f7a64af3bf2a0312d860a336
+  - name: Authorization
+    value: Bearer {% response 'body', 'req_bfbe07ff48a542daa3a39224c12419ed',
+      'b64::JC5kYXRhLmNyZWF0ZUF1dGhvcml6YXRpb24uYWNjZXNzVG9rZW4=::46b',
+      'when-expired', 60 %}
+    description: ""
+    id: pair_f3a272348ada498994dbd0e7a0498c67
+  - name: ""
+    value: ""
+    description: ""
+    id: pair_8c4ff23b42194935ae3c8c5b34593638
+authentication: {}
+metaSortKey: -1588633188756.7188
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
